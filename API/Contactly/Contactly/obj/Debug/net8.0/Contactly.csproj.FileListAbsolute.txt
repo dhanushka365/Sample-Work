@@ -42,3 +42,4 @@ C:\Users\USER\OneDrive\Desktop\Sample Work\API\Contactly\Contactly\obj\Debug\net
 C:\Users\USER\OneDrive\Desktop\Sample Work\API\Contactly\Contactly\obj\Debug\net8.0\Contactly.pdb
 C:\Users\USER\OneDrive\Desktop\Sample Work\API\Contactly\Contactly\obj\Debug\net8.0\Contactly.genruntimeconfig.cache
 C:\Users\USER\OneDrive\Desktop\Sample Work\API\Contactly\Contactly\obj\Debug\net8.0\ref\Contactly.dll
+C:\Users\USER\OneDrive\Desktop\Sample Work\API\Contactly\Contactly\obj\Debug\net8.0\Contactly.sourcelink.json

@@ -56,6 +56,45 @@ namespace Contactly.Controllers
 
             return Ok(contact);
         }
-       
+
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateContact(Guid id, [FromBody] UpdateRequestContactsDTO request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var contact = await dbContext.Contacts.FindAsync(id);
+
+            if (contact == null)
+            {
+                return NotFound();
+            }
+
+            if (!string.IsNullOrEmpty(request.Name))
+            {
+                contact.Name = request.Name;
+            }
+
+            if (!string.IsNullOrEmpty(request.Email))
+            {
+                contact.Email = request.Email;
+            }
+
+            if (!string.IsNullOrEmpty(request.PhoneNumber))
+            {
+                contact.PhoneNumber = request.PhoneNumber;
+            }
+
+            dbContext.Contacts.Update(contact);
+            await dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
     }
 }
